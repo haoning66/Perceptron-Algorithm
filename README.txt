@@ -1,0 +1,11 @@
+Hi, this is README.
+
+Environment: Mac OS 10.13.6  python3.6.6
+
+I implemented the perceptron algorithm as instructed. It works pretty good, has the same outcome as the instruction and can successfully pass the test file. When I use the command "python3 hhn_perceptron.py --nodev --iterations 1 --lr 1"(which means no develop file, 1 iteration and 1.0 learning rate) on my laptop it will output 
+"Test accuracy: 0.7856045384706299
+Feature weights (bias last): -7.0 -2.0 4.0 2.0 0.0 3.0 -1.0 3.0 7.0 3.0 -1.0 -1.0 0.0 -7.0 3.0 1.0 -2.0 2.0 -5.0 1.0 -2.0 -1.0 2.0 -1.0 3.0 -1.0 -5.0 4.0 1.0 1.0 1.0 5.0 -2.0 -4.0 -8.0 -1.0 1.0 2.0 3.0 6.0 -1.0 -5.0 -2.0 -1.0 -3.0 3.0 3.0 0.0 0.0 2.0 10.0 -2.0 -1.0 0.0 0.0 -6.0 0.0 0.0 7.0 0.0 6.0 0.0 -1.0 -4.0 -3.0 -1.0 1.0 3.0 -3.0 -2.0 -2.0 -4.0 1.0 -7.0 4.0 -5.0 2.0 -5.0 1.0 -1.0 -1.0 3.0 6.0 1.0 1.0 -4.0 3.0 0.0 0.0 -7.0 3.0 -1.0 -2.0 -1.0 4.0 -1.0 0.0 4.0 1.0 1.0 -1.0 -2.0 0.0 -1.0 1.0 0.0 -2.0 0.0 2.0 1.0 0.0 -4.0 -1.0 1.0 1.0 2.0 -1.0 2.0 1.0 -1.0 -1.0 -1.0 0.0 -3.0"
+The same as the instruction. 
+Also, I did some experiments. Using learning rate 1.0 with iterations varying from 1 to 10 and made a plot. As you can see in p1. As the the number of iterations increasing, accuracy varies. It came to the top at 2 and the bottom at 9. Plot p2 and p3 show the variation between learning rate and accuracy using the iterations 2. When learning rate is smaller than 1.0 accuracy varies unstably. When learning rate is bigger than 1.0 accuracy will remain the same. As for the develop dataset, when --nodev is not provided, after each iteration the weight we get will be used to test the accuracy using develop dataset. I calculated the mean of every 10 accuracies and when the mean of the accuracy starts to decrease the while loop will break and the iterations will stop. This prevents overfitting of the perceptron algorithm. However, it not always comes to a optimal solution, when the number of iterations is small such as 50, it may stop at local optimal but the accuracy may become better in the following iterations.
+
+              Copyright: 2019, Haoning Hu
